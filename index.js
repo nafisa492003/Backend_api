@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 
 app.use(cors({
-  origin: "https://e-commerce-fdr.netlify.app/", 
+  origin: "https://e-commerce-fdr.netlify.app", 
   credentials: true
 }));
 
