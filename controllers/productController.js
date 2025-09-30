@@ -2,12 +2,13 @@ const productSchema = require("../models/productSchema");
 
 const createProduct = async (req, res) => {
   try {
-    console.log("Body:", req.body);
-    console.log("File:", req.file);
+     console.log("------ DEBUG START ------");
+    console.log("BODY:", req.body);
+    console.log("FILE:", req.file);
+    console.log("FILES:", req.files);
+    console.log("------ DEBUG END ------");
     const { name, description, price, color, category, subcategory } = req.body;
     if (!name || !price || !category) {
-      console.log("req.body:", req.body);
-      console.log("req.file:", req.file);
 
       return res
         .status(400)
